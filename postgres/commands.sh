@@ -13,7 +13,7 @@
 #############################
 #############################
 
-psql postgres init # init postgres
+sudo -u postgres psql template1
 
 ########### MAC ###########
 #############################
