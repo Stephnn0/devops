@@ -22,3 +22,9 @@ docker rmi blog-api # remove docker image
 docker exec -it db-products ls
 
 docker inspect -f idcontainer #check docker container ip
+
+# inteactive access in docker img
+docker run -it node
+
+# inside access in docker img
+docker exec -it <container_name_or_id> /bin/bash
