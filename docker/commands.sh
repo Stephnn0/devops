@@ -28,3 +28,8 @@ docker run -it node
 
 # inside access in docker img
 docker exec -it <container_name_or_id> /bin/bash
+
+
+
+# FIND DOCKER IP CONTAINER
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' cd5c47b9061c
