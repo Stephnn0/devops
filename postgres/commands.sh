@@ -15,6 +15,11 @@
 
 sudo -u postgres psql template1
 
+sudo chmod o+rx /home/debian
+sudo chmod g+w /home/debian
+ls -ld /home/debian
+
+
 ########### MAC ###########
 #############################
 #############################
