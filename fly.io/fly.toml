@@ -1,0 +1,21 @@
+app = "app-name"
+primary_region = "iad"
+
+[env]
+PORT = "8081"
+SHOPIFY_APP_URL = "https://my-app.fly.dev"
+SHOPIFY_API_KEY = "<API_KEY>"
+SCOPES = "write_products"
+
+[http_service]
+auto_start_machines = true
+auto_stop_machines = true
+force_https = true
+internal_port = 3_000
+min_machines_running = 0
+processes = [ "app" ]
+
+[[vm]]
+cpu_kind = "shared"
+cpus = 1
+memory = "1gb"
