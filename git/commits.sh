@@ -28,6 +28,10 @@ git rebase --continue
 
 // ============================================= PULL 
 
+git config pull.rebase true
+git pull origin staging
+
+
 # Checkout your branch
 git checkout your-branch
 
