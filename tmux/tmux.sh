@@ -33,6 +33,9 @@ ctrl b , hold ctrl , arrows to change sizes of panes
 
 ctrl b, hold alt , 1 or 2
 
+ctrl b , x // kill panes
+
+ctrl b , & // kill window
 ---------------------------------------- windows
 
 ctrl b , c // new window
