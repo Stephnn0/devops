@@ -11,3 +11,52 @@ postgres -> db for testing
 template0 -> testing db readonly
 template1 -> testing db writeonly
 
+
+# ============================ locations =====================
+
+data directory: /var/lib/postgresql/<version>/main/
+config directory: /etc/postgresql/<version>/main/postgresql.conf
+
+
+
+
+
+# =============================================================================================================================
+
+Directories
+base: Contains subdirectories for each database in the cluster, where the actual data files for the databases are stored.
+
+global: Contains global data files that are shared across all databases in the cluster, such as user and permission information.
+
+pg_commit_ts: Stores commit timestamps for transactions, which helps track when transactions were committed.
+
+pg_dynshmem: Holds dynamic shared memory segments used by PostgreSQL processes for inter-process communication.
+
+pg_logical: Contains data related to logical replication, allowing you to set up replication between PostgreSQL servers.
+
+pg_multixact: Used for multi-transaction ID management, allowing more complex transaction scenarios.
+
+pg_notify: Stores notifications sent using the NOTIFY command, which are used for inter-process communication.
+
+pg_serial: Manages serializable transactions, ensuring that concurrent transactions do not interfere with each other.
+
+pg_stat: Contains statistics data files that PostgreSQL uses to track various performance metrics.
+
+pg_stat_tmp: A temporary directory for statistics files. It gets cleared periodically.
+
+pg_subtrans: Manages subtransaction information for handling nested transactions.
+
+pg_tblspc: Holds symbolic links to tablespaces, which are locations in the filesystem where PostgreSQL can store data.
+
+pg_twophase: Stores information related to two-phase commit transactions, which help ensure data consistency across distributed transactions.
+
+pg_wal: Contains write-ahead logs (WAL) that are used for data integrity and recovery. These logs record changes before they are written to the main database files.
+
+Files
+postgresql.auto.conf: This file contains configuration settings that have been set by users via SQL commands. It overrides settings in postgresql.conf.
+
+postmaster.pid: This file stores the process ID (PID) of the PostgreSQL server process and some information about the server's current state. It’s important for server management and shutdown.
+
+postmaster.opts: This file contains the command-line options used to start the PostgreSQL server.
+
+PG_VERSION: A file that indicates the version of the PostgreSQL data directory. This is used during upgrades or migrations.
