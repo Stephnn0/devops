@@ -1,0 +1,13 @@
+# ====================== LOGIN TO POSTGRES SUPER USER AND ENTER PSQL ==================
+
+sudo -i -u postgres
+psql
+
+\l -> dbs
+\du -> users
+
+# ============================ notes =========================
+postgres -> db for testing
+template0 -> testing db readonly
+template1 -> testing db writeonly
+
